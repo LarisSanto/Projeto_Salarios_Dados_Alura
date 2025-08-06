@@ -25,7 +25,11 @@ AULA 04
 - Python 
 -
 - 
-- 
+
+## Sobre Mim
+
+Sou **Larissa dos Santos Silva**, apaixonada por dados, BI e storytelling. Aqui compartilho os principais projetos que desenvolvi durante minha trajetória para a área de dados. 
+
 
 ## 📫 Contato
 
