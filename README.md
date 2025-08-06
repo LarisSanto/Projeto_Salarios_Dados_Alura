@@ -6,10 +6,19 @@
 
 # 📊 Imersão Dados com Python / Alura. 
 
+---
+
 AULA 01 
 - 
 
 
+
+
+
+
+---
+
+<p align="center">Feito com 💙 por Larissa dos Santos Silva</p>
 
 
 
