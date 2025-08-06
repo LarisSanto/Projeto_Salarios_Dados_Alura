@@ -27,11 +27,11 @@ AULA 04
 - 
 - 
 
-
 ## 📫 Contato
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil%20Profissional-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/seu-perfil)  
 http://www.linkedin.com/in/larissa-dos-santos-silva-11a285332
+
 ✉️ larissa.santos.silva9902@gmail.com
 
 
