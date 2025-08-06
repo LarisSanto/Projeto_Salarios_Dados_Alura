@@ -24,7 +24,8 @@ AULA 03
 AULA 04
 - 
 
-## 🛠️ Ferramentas utilizadas
+## 🛠️ Ferramentas / Linguagens utilizadas:
+
 - Google Colab
 - Python 
 -
