@@ -10,6 +10,10 @@
 
 AULA 01 
 -
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8d969f2f-6799-44c1-a3c3-663985f0f743" />
+
+
+---
 
 AULA 02
 - 
