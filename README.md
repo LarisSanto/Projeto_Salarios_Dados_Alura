@@ -21,8 +21,8 @@ AULA 04
 - 
 
 ## 🛠️ Ferramentas utilizadas
-- Google Colab;
-- Python;
+- Google Colab
+- Python 
 -
 - 
 - 
