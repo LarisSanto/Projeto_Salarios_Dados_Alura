@@ -46,9 +46,10 @@ Nesta aula, pude:
 
 - Google Colab
 - python 
-- PYTHON.
+- Streamlit
+- Vs code
+- Inteligência artificial (IA)
 - 
-
 
 ---
 
