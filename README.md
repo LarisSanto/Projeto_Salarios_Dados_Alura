@@ -53,7 +53,7 @@ Nesta aula, pude:
 
 ### 🔗 Link do Dashboard:
 
-- 
+- https://imersao-dados-python-alura-larissa-dos-2025.streamlit.app/
 
 ### 👩🏽 Sobre Mim
 
