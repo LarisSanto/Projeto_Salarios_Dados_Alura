@@ -81,7 +81,7 @@ col4.metric("Cargo mais frequente", cargo_mais_frequente)
 
 st.markdown("---")
 
-# --- Gráficos em sequência (um abaixo do outro) ---
+# --- Gráficos ---
 if not df_filtrado.empty:
     # Top 10 cargos por salário médio
     top_cargos = df_filtrado.groupby('cargo')['usd'].mean().nlargest(10).sort_values(ascending=True).reset_index()
@@ -191,3 +191,4 @@ if not df_filtrado.empty:
 # --- Tabela de Dados Detalhados ---
 st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
+
