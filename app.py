@@ -25,14 +25,14 @@ st.markdown(
     }
 
     /* Tags selecionadas do multiselect — de vermelho para azul */
-    .st-emotion-cache-1r6slb0, .st-emotion-cache-16idsys {
+    div[data-baseweb="tag"] {
         background-color: #1E90FF !important; /* Azul DodgerBlue */
         color: white !important; /* Texto branco */
         border: none !important;
     }
 
     /* Hover das tags */
-    .st-emotion-cache-1r6slb0:hover, .st-emotion-cache-16idsys:hover {
+    div[data-baseweb="tag"]:hover {
         background-color: #187bcd !important; /* Azul mais escuro */
         color: white !important;
     }
