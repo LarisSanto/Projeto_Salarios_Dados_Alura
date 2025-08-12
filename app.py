@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# --- CSS para cor dos ícones da barra lateral (azul) ---
+# --- CSS customizado para cores ---
 st.markdown(
     """
     <style>
@@ -59,7 +59,6 @@ contratos_selecionados = st.sidebar.multiselect("Tipo de Contrato", contratos_di
 tamanhos_disponiveis = sorted(df['tamanho_empresa'].unique())
 tamanhos_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanhos_disponiveis, default=tamanhos_disponiveis)
 
-
 # --- Filtragem do DataFrame ---
 df_filtrado = df[
     (df['ano'].isin(anos_selecionados)) &
@@ -91,9 +90,13 @@ col4.metric("Cargo mais frequente", cargo_mais_frequente)
 
 st.markdown("---")
 
+# --- Função para aplicar tamanho padrão aos gráficos ---
+def ajustar_tamanho(fig):
+    fig.update_layout(width=500, height=400)
+    return fig
+
 # --- Gráficos ---
 if not df_filtrado.empty:
-    # Top 10 cargos por salário médio
     top_cargos = df_filtrado.groupby('cargo')['usd'].mean().nlargest(10).sort_values(ascending=True).reset_index()
     grafico_cargos = px.bar(
         top_cargos,
@@ -106,9 +109,8 @@ if not df_filtrado.empty:
         color_continuous_scale='teal'
     )
     grafico_cargos.update_layout(title_x=0.1, yaxis={'categoryorder': 'total ascending'})
-    st.plotly_chart(grafico_cargos, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(grafico_cargos), use_container_width=False)
 
-    # Distribuição de salários anuais
     grafico_hist = px.histogram(
         df_filtrado,
         x='usd',
@@ -118,9 +120,8 @@ if not df_filtrado.empty:
         color_discrete_sequence=['#20B2AA']
     )
     grafico_hist.update_layout(title_x=0.1)
-    st.plotly_chart(grafico_hist, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(grafico_hist), use_container_width=False)
 
-    # Proporção dos tipos de trabalho
     remoto_contagem = df_filtrado['remoto'].value_counts().reset_index()
     remoto_contagem.columns = ['tipo_trabalho', 'quantidade']
     grafico_remoto = px.pie(
@@ -133,9 +134,8 @@ if not df_filtrado.empty:
     )
     grafico_remoto.update_traces(textinfo='percent+label')
     grafico_remoto.update_layout(title_x=0.1)
-    st.plotly_chart(grafico_remoto, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(grafico_remoto), use_container_width=False)
 
-    # Salário médio de Cientista de Dados por país
     df_ds = df_filtrado[df_filtrado['cargo'] == 'Data Scientist']
     media_ds_pais = df_ds.groupby('residencia_iso3')['usd'].mean().reset_index()
     grafico_paises = px.choropleth(
@@ -147,9 +147,8 @@ if not df_filtrado.empty:
         labels={'usd': 'Salário médio (USD)', 'residencia_iso3': 'País'}
     )
     grafico_paises.update_layout(title_x=0.1)
-    st.plotly_chart(grafico_paises, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(grafico_paises), use_container_width=False)
 
-    # Evolução do salário médio ao longo dos anos
     graf_evolucao = px.line(
         df_filtrado.groupby('ano')['usd'].mean().reset_index(),
         x='ano',
@@ -159,9 +158,8 @@ if not df_filtrado.empty:
         color_discrete_sequence=['#20B2AA']
     )
     graf_evolucao.update_layout(title_x=0.1)
-    st.plotly_chart(graf_evolucao, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(graf_evolucao), use_container_width=False)
 
-    # Salário médio por senioridade
     graf_senioridade = px.bar(
         df_filtrado.groupby('senioridade')['usd'].mean().reset_index(),
         x='senioridade',
@@ -171,9 +169,8 @@ if not df_filtrado.empty:
         color_continuous_scale='teal'
     )
     graf_senioridade.update_layout(title_x=0.1)
-    st.plotly_chart(graf_senioridade, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(graf_senioridade), use_container_width=False)
 
-    # Comparativo de salários por tipo de contrato
     graf_contrato = px.bar(
         df_filtrado.groupby('contrato')['usd'].mean().reset_index(),
         x='contrato',
@@ -183,9 +180,8 @@ if not df_filtrado.empty:
         color_continuous_scale='teal'
     )
     graf_contrato.update_layout(title_x=0.1)
-    st.plotly_chart(graf_contrato, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(graf_contrato), use_container_width=False)
 
-    # Top países com maior salário médio
     top_paises = df_filtrado.groupby('residencia_iso3')['usd'].mean().nlargest(10).reset_index()
     graf_top_paises = px.bar(
         top_paises,
@@ -196,10 +192,8 @@ if not df_filtrado.empty:
         color_continuous_scale='teal'
     )
     graf_top_paises.update_layout(title_x=0.1)
-    st.plotly_chart(graf_top_paises, use_container_width=True)
+    st.plotly_chart(ajustar_tamanho(graf_top_paises), use_container_width=False)
 
 # --- Tabela de Dados Detalhados ---
 st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
-
-
