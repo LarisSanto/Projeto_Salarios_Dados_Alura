@@ -13,15 +13,28 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Permite ajustar largura da barra lateral */
+    /* Barra lateral largura */
     [data-testid="stSidebar"] {
         min-width: 200px;
-        max-width: 600px; /* Máximo maior para permitir ajuste */
+        max-width: 600px;
     }
 
-    /* Cor dos ícones dos filtros */
+    /* Ícones azuis viram brancos */
     [data-testid="stSidebar"] svg {
-        fill: #1E90FF !important; /* Azul DodgerBlue */
+        fill: white !important;
+    }
+
+    /* Tags selecionadas do multiselect — de vermelho para azul */
+    .st-emotion-cache-1r6slb0, .st-emotion-cache-16idsys {
+        background-color: #1E90FF !important; /* Azul DodgerBlue */
+        color: white !important; /* Texto branco */
+        border: none !important;
+    }
+
+    /* Hover das tags */
+    .st-emotion-cache-1r6slb0:hover, .st-emotion-cache-16idsys:hover {
+        background-color: #187bcd !important; /* Azul mais escuro */
+        color: white !important;
     }
     </style>
     """,
