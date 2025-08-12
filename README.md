@@ -49,11 +49,12 @@ Nesta aula, pude:
 - Streamlit
 - Vs code
 - Inteligência artificial (IA)
-- 
 
 ### 🔗 Link do Dashboard:
 
 - https://imersao-dados-python-alura-larissa-dos-2025.streamlit.app/
+
+
 
 ### 👩🏽 Sobre Mim
 
@@ -67,10 +68,7 @@ Estou super aberta para sugestôes e dicas!
 
 
 
-
-
-
-## 📫 Contato
+### 📫 Contato
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil%20Profissional-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/seu-perfil)  
 http://www.linkedin.com/in/larissa-dos-santos-silva-11a285332
