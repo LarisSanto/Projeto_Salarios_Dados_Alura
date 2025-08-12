@@ -51,10 +51,11 @@ Nesta aula, pude:
 - Inteligência artificial (IA)
 - 
 
----
+### 🔗 Link do Dashboard:
 
+- 
 
-## Sobre Mim
+### 👩🏽 Sobre Mim
 
 Sou **Larissa dos Santos Silva**, apaixonada por dados, BI e storytelling. Aqui compartilho os principais projetos que desenvolvi durante minha formação na Área de Dados.
 
