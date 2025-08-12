@@ -46,16 +46,13 @@ contratos_selecionados = st.sidebar.multiselect("Tipo de Contrato", contratos_di
 tamanhos_disponiveis = sorted(df['tamanho_empresa'].unique())
 tamanhos_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanhos_disponiveis, default=tamanhos_disponiveis)
 
-carrgos_disponiveis = sorted(df['cargo'].unique())
-cargos_selecionados = st.sidebar.multiselect("Tipo de cargo", carrgos_disponiveis, default=carrgos_disponiveis)
 
 # --- Filtragem do DataFrame ---
 df_filtrado = df[
     (df['ano'].isin(anos_selecionados)) &
     (df['senioridade'].isin(senioridades_selecionadas)) &
     (df['contrato'].isin(contratos_selecionados)) &
-    (df['tamanho_empresa'].isin(tamanhos_selecionados)) &
-    (df['cargo'].isin(cargos_selecionados))
+    (df['tamanho_empresa'].isin(tamanhos_selecionados)) 
 ]
 
 # --- Conteúdo Principal ---
@@ -191,4 +188,5 @@ if not df_filtrado.empty:
 # --- Tabela de Dados Detalhados ---
 st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
+
 
