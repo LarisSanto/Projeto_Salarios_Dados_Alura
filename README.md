@@ -56,6 +56,7 @@ Nesta aula, pude:
 
 
 
+
 ### 👩🏽 Sobre Mim
 
 Sou **Larissa dos Santos Silva**, apaixonada por dados, BI e storytelling. Aqui compartilho os principais projetos que desenvolvi durante minha formação na Área de Dados.
