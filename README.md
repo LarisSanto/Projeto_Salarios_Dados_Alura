@@ -9,8 +9,8 @@ Dashboard de Salários na Área de Dados Este projeto demonstra um fluxo de trab
 
  **Análise e Metodologia O projeto foi dividido em duas fases principais:**
 
- ****Análise Exploratória e Limpeza de Dados: Um notebook em Python foi utilizado para carregar a base de dados salaries.csv, renomear colunas, tratar valores ausentes, categorizar variáveis e gerar visualizações iniciais.
-Desenvolvimento do Dashboard: O código em Streamlit foi criado para transformar a análise em uma ferramenta interativa. Ele inclui filtros dinâmicos, KPIs principais, e gráficos que se atualizam em tempo real com as seleções do usuário.
+ Análise Exploratória e Limpeza de Dados: Um notebook em Python foi utilizado para carregar a base de dados salaries.csv, renomear colunas, tratar valores ausentes, categorizar variáveis e gerar visualizações iniciais.
+ Desenvolvimento do Dashboard: O código em Streamlit foi criado para transformar a análise em uma ferramenta interativa. Ele inclui filtros dinâmicos, KPIs principais, e gráficos que se atualizam em tempo real com as seleções do usuário.
 
  **Principais Insights do Projeto Crescimento Salarial:** 
 
@@ -26,7 +26,7 @@ dados-imersao-final.csv: Arquivo CSV limpo e pronto para ser consumido pelo dash
 
 **Tecnologias Utilizadas Python:**
 
-**-** Pandas: Manipulação e limpeza de dados.
+- Pandas: Manipulação e limpeza de dados.
 - Seaborn & Plotly Express: Visualização e criação de gráficos interativos.
 - Streamlit: Desenvolvimento da aplicação web e do dashboard.
 - pycountry: Enriquecimento de dados geográficos.
