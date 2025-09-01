@@ -3,7 +3,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=052D6E&height=120&section=header" alt="Capa animada superior" width="1000" />
 </p>
 
-# Projeto Salários na Área de Dados / Imersão Dados com Python - Alura 📊
+# Projeto Salários na Área de Dados 📊 
 
 Dashboard de Salários na Área de Dados Este projeto demonstra um fluxo de trabalho completo de um Analista de Dados, desde a exploração inicial de um conjunto de dados sobre salários até o desenvolvimento de um dashboard interativo. O objetivo é fornecer uma ferramenta de análise dinâmica para entender as tendências salariais na área de dados.
 
