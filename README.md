@@ -44,7 +44,7 @@ https://imersao-dados-python-alura-larissa-dos-2025.streamlit.app/
 
 ### 👩🏽 Sobre Mim
 
-Sou **Larissa dos Santos Silva**, apaixonada por dados, BI e storytelling. Aqui compartilho os principais projetos que desenvolvi durante minha formação na Área de Dados.
+Sou **Larissa dos Santos Silva**, apaixonada por dados. Aqui compartilho os principais projetos que desenvolvi durante minha formação na Área de Dados.
 
 
 Este projeto faz parte do meu processo de aprendizado e desenvolvimento pessoal e profissional. 
